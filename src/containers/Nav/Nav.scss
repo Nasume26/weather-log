@@ -1,0 +1,11 @@
+@use '../../scss/vars' as *;
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__heading {
+        margin-left: 15px;
+    }
+}

@@ -70,7 +70,7 @@ const Nav = (props) => {
 
     return (
         <div className="nav-container">
-            <p>Nav</p>
+            <h1 className="nav-container__heading">Weather-Log</h1>
             <Search search = {search} handleInput ={handleInput} getWeatherData = {getWeatherData}/>
         </div>
 
