@@ -10,9 +10,6 @@ function App() {
 const [weatherData, setWeatherData] = useState();
 
 
-const getWeatherData = () => {
-  fetch()
-}
 
 
 
@@ -22,7 +19,7 @@ const getWeatherData = () => {
 
   return (
     <div className="App">
-      <Nav />
+      <Nav setWeatherData = {setWeatherData}/>
       <Home />
     </div>
   );
