@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 function App() {
 
 const [weatherData, setWeatherData] = useState();
+const [historyData, setHistoryData] = useState();
 
 
 
@@ -19,8 +20,8 @@ const [weatherData, setWeatherData] = useState();
 
   return (
     <div className="App">
-      <Nav setWeatherData = {setWeatherData}/>
-      <Home weatherData= {weatherData}/>
+      <Nav setWeatherData = {setWeatherData} setHistoryData= {setHistoryData}/>
+      <Home weatherData= {weatherData} historyData = {historyData}/>
     </div>
   );
 }
