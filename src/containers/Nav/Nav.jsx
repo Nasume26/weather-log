@@ -73,7 +73,9 @@ const Nav = (props) => {
     }
 
     const handleInput = (event) => {
-        setSearch(event.target.value)
+        const cleanInput= event.target.value.toLowerCase()
+        
+        setSearch(cleanInput)
     }
 
    
