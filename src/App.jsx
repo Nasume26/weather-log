@@ -1,6 +1,8 @@
 import Nav from './containers/Nav/Nav';
 import Home from './containers/Home/Home';
 
+import "./App.scss"
+
 import { useState, useEffect } from 'react';
 
 

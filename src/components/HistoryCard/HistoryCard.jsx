@@ -1,4 +1,4 @@
-
+import "./HistoryCard.scss"
 
 const HistoryCard = (props) => {
     const { historyData } = props;
