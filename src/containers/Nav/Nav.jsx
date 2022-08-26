@@ -76,6 +76,8 @@ const Nav = (props) => {
         const cleanInput= event.target.value.toLowerCase()
         
         setSearch(cleanInput)
+        setHistoryData("")
+        setWeatherData("")
     }
 
    
