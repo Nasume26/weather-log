@@ -1,14 +1,18 @@
 
 
 const Search =(props) => {
-
+    const {search, handleInput} = props;
 
 
     return (
         <>
         <form>
             <label>Search
-                <input>
+                <input
+                type="text"
+                value={search}
+                onInput={handleInput}
+                >
                 </input>
             </label>
         </form>
