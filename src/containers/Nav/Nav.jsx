@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./Nav.scss"
 
 const Nav = (props) => {
-    const { setWeatherData, setHistoryData } = props;
+    const { setWeatherData, setHistoryData, weatherData } = props;
 
     const [search,setSearch] = useState()
 
@@ -18,7 +18,7 @@ const Nav = (props) => {
         .then((data) => {
             console.log(data)
             setWeatherData(data)
-    })
+    }).then (postData)
         .catch((err) => {
             console.log(err)
         })
@@ -44,9 +44,29 @@ const Nav = (props) => {
     }
 
 
+    const postData = () => {
+        fetch(`http://localhost:3007/api/weather/`, {
+            method: `POST`,
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                location: search,
+                temp: weatherData.main.temp,
+                feelTemp: weatherData.main.feels_like,
+                cond: weatherData.weather[0].description,
+                humidity: weatherData.main.humidity,
+                imageKey: weatherData.weather[0].main
+            })
+
+        })
+    }
+
     const handleInput = (event) => {
         setSearch(event.target.value)
     }
+
+   
 
     return (
         <div className="nav-container">

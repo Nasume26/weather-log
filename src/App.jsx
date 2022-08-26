@@ -20,7 +20,7 @@ const [historyData, setHistoryData] = useState();
 
   return (
     <div className="App">
-      <Nav setWeatherData = {setWeatherData} setHistoryData= {setHistoryData}/>
+      <Nav setWeatherData = {setWeatherData} setHistoryData= {setHistoryData} weatherData ={weatherData}/>
       <Home weatherData= {weatherData} historyData = {historyData}/>
     </div>
   );
