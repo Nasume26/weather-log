@@ -1,0 +1,7 @@
+@use '../../scss/vars' as *;
+
+.weather-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
