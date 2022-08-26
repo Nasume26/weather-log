@@ -9,13 +9,18 @@ const Nav = (props) => {
 
     const getWeatherData = (event) => {
         event.preventDefault();
-        fetch(`api.openweathermap.org/data/2.5/weather?q=${search}&APPID=f22f1790421db906a5f1f903e89a28db`)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=f22f1790421db906a5f1f903e89a28db`,
+        )
         .then((res) => {
+            console.log(res)
             return res.json()
         })
         .then((data) => {
             console.log(data)
     })
+        .catch((err) => {
+            console.log(err)
+        })
     }
 
 
