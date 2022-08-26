@@ -1,12 +1,12 @@
 
 
 const Search =(props) => {
-    const {search, handleInput} = props;
+    const {search, handleInput, getWeatherData} = props;
 
 
     return (
         <>
-        <form>
+        <form onSubmit={getWeatherData}>
             <label>Search
                 <input
                 type="text"
