@@ -16,9 +16,19 @@ const Nav = (props) => {
             return res.json()
         })
         .then((data) => {
-            console.log(data)
-            setWeatherData(data)
-    }).then (postData)
+            if(data.cod === "404") {
+
+            } else {
+            setWeatherData(data)}
+            return data
+    }).then ((data) => {
+        console.log(data)
+        if(data.cod=== "404") {
+        alert("The location you are trying to access is not valid")
+    } else {
+        postData()
+    }
+    })
         .catch((err) => {
             console.log(err)
         })
@@ -34,7 +44,7 @@ const Nav = (props) => {
         return res.json()
       })
       .then((data)=> {
-        console.log(data)
+   
         setHistoryData(data)
       })
       .catch((err) => {
