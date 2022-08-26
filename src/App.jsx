@@ -20,7 +20,7 @@ const [weatherData, setWeatherData] = useState();
   return (
     <div className="App">
       <Nav setWeatherData = {setWeatherData}/>
-      <Home />
+      <Home weatherData= {weatherData}/>
     </div>
   );
 }

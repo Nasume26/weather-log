@@ -1,13 +1,16 @@
+import WeatherCard from "../../components/WeatherCard/WeatherCard";
 
 
 const Home = (props) => {
+    const {weatherData} = props;
+
 
 
 
 
     return (
         <div className="home-container">
-            <p>Home</p>
+        {weatherData && <WeatherCard weatherData={weatherData}/>}
 
         </div>
 
