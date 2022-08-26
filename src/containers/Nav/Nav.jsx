@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./Nav.scss"
 
 const Nav = (props) => {
-    const { setWeatherData } = props;
+    const { setWeatherData, setHistoryData } = props;
 
     const [search,setSearch] = useState()
 
@@ -22,6 +22,25 @@ const Nav = (props) => {
         .catch((err) => {
             console.log(err)
         })
+
+        fetch (`http://localhost:3007/api/weather/${search}`,
+        {
+        headers : { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+  
+      }).then((res) => {
+        return res.json()
+      })
+      .then((data)=> {
+        console.log(data)
+        setHistoryData(data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  
     }
 
 
