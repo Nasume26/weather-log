@@ -1,5 +1,7 @@
 import "./HistoryCard.scss"
 import scatteredClouds from '../../images/scattered clouds.png'
+import brokenClouds from "../../images/broken clouds.png"
+import clearSkies from "../../images/clear skies.png"
 
 const HistoryCard = (props) => {
     const { historyData } = props;
@@ -17,6 +19,10 @@ const HistoryCard = (props) => {
     const imageFilter = () => {
         if (historyData.cond == "scattered clouds") {
             return scatteredClouds
+        } else if (historyData.cond == "broken clouds") {
+            return brokenClouds
+        }else if (historyData.cond == "clear sky") {
+            return clearSkies
         }
     }
     
