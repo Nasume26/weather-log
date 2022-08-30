@@ -1,13 +1,21 @@
 @use "../../scss/vars" as *;
 
 .history-container {
-    border: 4px solid $card-border;
+    border: 4px solid $history-border;
     position: relative;
     margin-top: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 30px;
+    background: $history-background;
 
+
+    &__top {
+        margin-left: 20px;
+
+
+    }
 
     &:after{
         content: "";
@@ -16,7 +24,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(rgb(70, 70, 68), 0.2);
-        border-radius: 30px;
+        background: rgba(rgb(0, 0, 0), 0.2);
+        border-radius: 27px;
     }
 }

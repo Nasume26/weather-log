@@ -26,7 +26,7 @@ const HistoryCard = (props) => {
     
     return (
         <div className="history-container">
-                <div>
+                <div className="history-container__top">
                     <h1>{renderDate.toDateString()} </h1>
                     <p>{renderDate.toTimeString()}</p>
                 
