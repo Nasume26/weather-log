@@ -24,7 +24,7 @@ const Nav = (props) => {
         if(data.cod=== "404") {
         alert("The location you are trying to access is not valid")
     } else {
-        postData()
+        postData(data)
     }
     })
         .catch((err) => {
@@ -52,7 +52,7 @@ const Nav = (props) => {
     }
 
 
-    const postData = () => {
+    const postData = (data) => {
         fetch(`http://localhost:3007/api/weather/`, {
             method: `POST`,
             headers: {
@@ -60,11 +60,11 @@ const Nav = (props) => {
             },
             body: JSON.stringify({
                 location: search,
-                temp: weatherData.main.temp,
-                feelTemp: weatherData.main.feels_like,
-                cond: weatherData.weather[0].description,
-                humidity: weatherData.main.humidity,
-                imageKey: weatherData.weather[0].main
+                temp: data.main.temp,
+                feelTemp: data.main.feels_like,
+                cond: data.weather[0].description,
+                humidity: data.main.humidity,
+                imageKey: data.weather[0].main
             })
 
         })
