@@ -14,6 +14,16 @@
 
     &__top {
         margin-left: 20px;
+        color: $card-primary-font-color;
+
+        h1 {
+            font-family: $card-title-font;
+            
+        }
+
+        h3, h4 {
+            font-family: $card-subtitle-font;
+        }
     }
 
     &__bottom {
