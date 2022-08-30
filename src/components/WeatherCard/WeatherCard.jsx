@@ -22,13 +22,13 @@ const WeatherCard = (props) => {
                 <h3>{weatherData.main.temp} degrees farenheit</h3>
                 <h4>RealFeel: {weatherData.main.feels_like}</h4> 
             </div>
-            <div>
+            <div className='weather-data__mid'>
                 <p>{weatherData.weather[0].description}</p>
                 <p>Humidity: {weatherData.main.humidity}%</p>
                 
             </div>
-            <div>
-            <img src={imageFilter()} />
+            <div className='weather-data__bottom'>
+                <img src={imageFilter()} />
             </div>
         </div>
 

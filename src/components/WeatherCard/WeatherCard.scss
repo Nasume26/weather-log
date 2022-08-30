@@ -1,13 +1,38 @@
 @use '../../scss/vars' as *;
 
+
 .weather-data {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    border: 2px solid red;
+    position: relative;
+
+    border: 5px solid $card-border;
+    border-radius: 10px;
+    background: $card-background;
 
     &__top {
         margin-left: 20px;
     }
+
+    &__bottom {
+        background: white;
+        border-radius: 30px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+
+}
+
+.weather-data:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(rgb(236, 218, 26), 0.2);
 }
