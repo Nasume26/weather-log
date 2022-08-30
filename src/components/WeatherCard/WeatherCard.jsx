@@ -1,7 +1,19 @@
 import './WeatherCard.scss'
+import scatteredClouds from '../../images/scattered clouds.png'
+import brokenClouds from "../../images/broken clouds.png"
+import clearSkies from "../../images/clear skies.png"
 
 const WeatherCard = (props) => {
     const {weatherData} = props;
+
+
+    const imageFilter = () => {
+        if (weatherData.weather[0].main == "Clouds") {
+            return scatteredClouds
+        } else if (weatherData.weather[0].main == "Clear") {
+            return clearSkies
+        }
+    }
 
     return (
         <div className='weather-data'>
@@ -16,7 +28,7 @@ const WeatherCard = (props) => {
                 
             </div>
             <div>
-            <img src= "https://openweathermap.org/themes/openweathermap/assets/img/logo_white_cropped.png" />
+            <img src={imageFilter()} />
             </div>
         </div>
 

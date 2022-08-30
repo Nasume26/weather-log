@@ -17,11 +17,9 @@ const HistoryCard = (props) => {
 
 
     const imageFilter = () => {
-        if (historyData.cond == "scattered clouds") {
+        if (historyData.imageKey == "Clouds") {
             return scatteredClouds
-        } else if (historyData.cond == "broken clouds") {
-            return brokenClouds
-        }else if (historyData.cond == "clear sky") {
+        } else if (historyData.imageKey == "Clear") {
             return clearSkies
         }
     }
