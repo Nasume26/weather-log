@@ -1,11 +1,29 @@
 @use '../../scss/vars' as *;
 
 .search-container {
-
-    margin-right: 15px;
+    background: $history-background;
+    padding: 20px;
+    margin-right: 45px;
+    border-radius: 20px;
+    border: 4px solid $card-border;
 
     form {
-        color: blue;
+        display: flex;
+        
+        label {
+            font-family: $card-subtitle-font;
+            text-align: center;
+        }
+
+        input {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 4px;
+            width: 100%;
+            font-family: $card-subtitle-font;
+        }
         
     }
 }
