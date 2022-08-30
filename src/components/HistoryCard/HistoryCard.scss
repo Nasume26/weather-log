@@ -43,13 +43,23 @@
     &__mid {
         font-family: $card-teritary-font;
         font-weight: bolder;
-        font-size: 25px;
+        font-size: 20px;
         border: 4px solid $card-border;
         padding: 20px;
         padding-left: 40px;
         padding-right: 40px;
         border-radius: 25px;
         background: $history-header-background;
+    }
+
+    &__bottom {
+        background: white;
+        border-radius: 30px;
+        border: 4px solid $card-border;
+
+        img {
+            border-radius: 30px;
+        }
     }
 
     &:after{

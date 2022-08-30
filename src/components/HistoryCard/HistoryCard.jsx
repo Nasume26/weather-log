@@ -39,7 +39,7 @@ const HistoryCard = (props) => {
                     <p>{historyData.cond}</p>
                     <p>Humidity: {historyData.humidity}%</p>
                 </div>
-                <div>
+                <div className="history-container__bottom">
                     <img src={imageFilter()}/>
                 </div>
             <div>
