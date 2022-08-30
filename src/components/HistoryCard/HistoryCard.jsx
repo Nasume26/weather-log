@@ -27,8 +27,10 @@ const HistoryCard = (props) => {
     return (
         <div className="history-container">
                 <div className="history-container__top">
-                    <h1>{renderDate.toDateString()} </h1>
-                    <p>{renderDate.toTimeString()}</p>
+                    <div className="history-container__top__header">
+                        <h1>{renderDate.toDateString()} </h1>
+                        <p>{renderDate.toTimeString()}</p>
+                    </div>
                 
                     <h3>{historyData.temp} degrees farenheit</h3>
                     <h4>RealFeel: {historyData.feelTemp}</h4> 

@@ -14,6 +14,26 @@
     &__top {
         margin-left: 20px;
 
+        &__header {
+            border: 4px solid $card-border;
+            padding: 5px;
+            border-radius: 15px;
+            margin-top: 5px;
+            background: $history-header-background;
+
+            h1 {
+                font-family: $card-subtitle-font;
+                font-size: 25px;
+            }
+            p {
+                font-family: $card-subtitle-font;
+                font-weight: bolder;
+            }
+
+        }
+
+       
+
 
     }
 
