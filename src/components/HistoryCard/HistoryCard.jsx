@@ -35,7 +35,7 @@ const HistoryCard = (props) => {
                     <h3>{historyData.temp} degrees farenheit</h3>
                     <h4>RealFeel: {historyData.feelTemp}</h4> 
                 </div>
-                <div>
+                <div className="history-container__mid">
                     <p>{historyData.cond}</p>
                     <p>Humidity: {historyData.humidity}%</p>
                 </div>
