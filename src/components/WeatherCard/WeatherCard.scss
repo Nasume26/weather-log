@@ -6,7 +6,6 @@
     justify-content: space-between;
     align-items: center;
 
-    position: relative;
 
     border: 5px solid $card-border;
     border-radius: 10px;
@@ -55,12 +54,3 @@
 
 }
 
-// .weather-data:after {
-//     content: "";
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     background: rgba(rgb(236, 218, 26), 0.2);
-// }

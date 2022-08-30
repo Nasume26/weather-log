@@ -26,15 +26,20 @@ const HistoryCard = (props) => {
     
     return (
         <div className="history-container">
-            <h1>{renderDate.toDateString()} </h1>
-            <p>{renderDate.toTimeString()}</p>
-            <div>
-                <h3>{historyData.temp} degrees farenheit</h3>
-                <h4>RealFeel: {historyData.feelTemp}</h4> 
-                <p>{historyData.cond}</p>
-                <p>Humidity: {historyData.humidity}%</p>
-            </div>
-            <img src={imageFilter()}/>
+                <div>
+                    <h1>{renderDate.toDateString()} </h1>
+                    <p>{renderDate.toTimeString()}</p>
+                
+                    <h3>{historyData.temp} degrees farenheit</h3>
+                    <h4>RealFeel: {historyData.feelTemp}</h4> 
+                </div>
+                <div>
+                    <p>{historyData.cond}</p>
+                    <p>Humidity: {historyData.humidity}%</p>
+                </div>
+                <div>
+                    <img src={imageFilter()}/>
+                </div>
             <div>
 
             </div>
