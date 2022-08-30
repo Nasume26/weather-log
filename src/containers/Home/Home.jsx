@@ -1,3 +1,4 @@
+import DefaultRender from "../../components/DefaultRender/DefaultRender";
 import HistoryCard from "../../components/HistoryCard/HistoryCard";
 import WeatherCard from "../../components/WeatherCard/WeatherCard";
 import HistoryContainer from "../HistoryContainer/HistoryContainer";
@@ -13,7 +14,7 @@ const Home = (props) => {
 
     return (
         <div className="home-container">
-            {!weatherData && <h1>Test</h1>}
+            {!weatherData && <DefaultRender />}
         {weatherData && <WeatherCard weatherData={weatherData}/>}
         {historyData && <HistoryContainer historyData= {historyData}/>}
 
