@@ -13,6 +13,7 @@ const Home = (props) => {
 
     return (
         <div className="home-container">
+            {!weatherData && <h1>Test</h1>}
         {weatherData && <WeatherCard weatherData={weatherData}/>}
         {historyData && <HistoryContainer historyData= {historyData}/>}
 

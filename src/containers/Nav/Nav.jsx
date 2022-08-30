@@ -12,7 +12,6 @@ const Nav = (props) => {
         fetch(`http://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=f22f1790421db906a5f1f903e89a28db&units=imperial`,
         )
         .then((res) => {
-            console.log(res)
             return res.json()
         })
         .then((data) => {
@@ -22,7 +21,6 @@ const Nav = (props) => {
             setWeatherData(data)}
             return data
     }).then ((data) => {
-        console.log(data)
         if(data.cod=== "404") {
         alert("The location you are trying to access is not valid")
     } else {
